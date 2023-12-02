@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+  <title>Chat de WhatsApp</title>
+  <style>
+    
+    body {
+      font-family: Century gothic;
+      margin: 0;
+      padding: 0;
+      height: 90vh;
+    
+    }
+  
+    .container {
+      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      color: white;
+      height: 100%;
+      margin: 10px auto;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(20, 20, 202, 0.1);
+      padding: 20px;
+      border: solid rgb(214, 29, 29);
+      background-image: url("1009113.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .profile-name {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      font-family:Century gothic
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 24px;
+      font-size: 24px;
+      font-family: century gothic;
+      border: 1px solid #3777ec;
+      border-radius: 64px;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+    }
+
+    button {
+      padding: 16px 32px;
+      font-size: 21px;
+      position: relative; top: -5px;
+      font-family:  Century gothic;
+      background-color: #05c5ff;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      transition: 1s;
+      background-color: #ffffff;
+      color: #ec7e18;
+      font-size: 32px;
+    }
+    
+    button:not(:hover){   padding: 16px 32px;
+
+      position: relative; top: -5px;
+      font-family:  Century gothic;
+      background-color: #f70e0e;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-left: 5px;
+      transition: 1s;
+
+    }
+
+    #messages {
+      flex-grow: 1;
+      margin-top: 20px;
+      overflow-y: auto;
+    }
+  
+    .message {
+      background-color: #dcf8c6;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .default-message {
+      background-color: #8400ff;
+      font-family: century gothic;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      margin-left: auto;
+      text-align: right;
+      border-radius: 45px;
+      padding: 20px;
+    }
+
+    .user-message {
+      background-color: #6d02f8;
+      font-family: century gothic;
+
+      position: relative ;left: 0;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      margin-left: auto;
+      text-align: right;
+      border-radius: 50px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="profile-pic" src="daverson.jpg" alt="Profile Picture">
+
+      <div class="profile-name">daverson jordan
+      </div>
+    </div>
+
+    <div id="messages">
+      <div class="message default-message">hola bro como estas</div>
+      <div class="message default-message">todo bien</div>
+    </div>
+    
+    <div class="input-container">
+      <input type="text" id="miInput" placeholder="Mensaje">
+      <button id="miBoton">Enviar</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" async="" src="./Chat de WhatsApp_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./Chat de WhatsApp_files/js"></script><script type="text/javascript" async="" src="./Chat de WhatsApp_files/js(1)"></script><script async="" src="./Chat de WhatsApp_files/js(2)"></script><script>
+    const input = document.getElementById('miInput');
+    const boton = document.getElementById('miBoton');
+    const contenedor = document.getElementById('messages');
+
+    boton.addEventListener('click', () => {
+      const nuevoElemento = document.createElement('div');
+      nuevoElemento.classList.add('message', 'user-message');
+      nuevoElemento.textContent = input.value;
+
+      contenedor.appendChild(nuevoElemento);
+      contenedor.scrollTop = contenedor.scrollHeight;
+
+      input.value = '';
+      
+     
+    });
+  </script>
+<script src="./Chat de WhatsApp_files/wd.js.descarga"></script>
+</body></html>
